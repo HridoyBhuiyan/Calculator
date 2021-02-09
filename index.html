@@ -1,46 +1,67 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1>Calculator</h1>
-    <div class="card-root">
-        <input type="text" id="seldis" placeholder="Number" class="display">
-        <div class="card">
-            <div>
-                <input type="button" value='7' class="btn">
-                <input type="button" value='8'class="btn">
-                <input type="button" value='9' class="btn">
-                <input type="button" value='+/-' class="btn">
-                <input type="button" value='->' class="btn">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="index.js"></script>
+        <title>Calculate and save your data</title>
+    </head>
+    <body class="text-center">        
+        <div class="main-title-area">
+            <div class="main-title bg-light container">
+                <h1>Calculate and Store data at client side</h1>
             </div>
-            <div>
-                <input type="button" value='4' class="btn">
-                <input type="button" value='5' class="btn">
-                <input type="button" value='6' class="btn">
-                <input type="button" value='x' class="btn">
-                <input type="button" value='%' class="btn">
-            </div>
-            <div>
-                <input type="button" value='1' class="btn">
-                <input type="button" value='2' class="btn">
-                <input type="button" value='3' class="btn">
-                <input type="button" value='-' class="btn">
-                <input type="button" value='+' class="btn">
-            </div>
-            <div>
-                <input type="button" value='C' class="btn">
-                <input type="button" value='0' class="btn">
-                <input type="button" value='.' class="btn">
-                <input type="button" value='=' class="btn">
-                <input type="button" value='CE' class="btn">
+            <hr>
+            <div class="tools-list-area container">
+                    <div class="converter-area ">
+                        <div class="Kilogram-tools-area">
+                            <div action="#">
+                                <h2 class="pt-2 pl-2 text-center ">KG To Gram</h2>              
+                                <div class="tools-input-output row col-md-12">
+                                    <div class="tools-input-area col-md-6 bg-info rounded">
+                                        <div class="container-fluid mt-5 ">                                          
+                                            <input type="number" id="input1" class="form-control" onkeyup="change1()" placeholder="Enter Kilograms?" onkeyup="change ()">
+                                            <br>   
+                                            <button onclick="pushprint1()" class="btn btn-primary mb-4">Save & Next</button>
+                                            <p id="output1" class="p-2 output"> __ Grams</p>
+                                        </div>
+                                    </div>
+                                    <div class="tools-output-save col-md-6 bg-danger rounded" >
+                                        <h5 class="text-white pt-3">Your Value Calculation</h5>
+                                        <hr class="bg-white">
+                                        <div id="dropHistory1"></div>
+                                    </div> 
+                                </div>                          
+                                <hr/>
+                            </div>
+                        </div>
+                        <div class="Gram-tools-area">
+                            <div>
+                                <h2 class="pt-2 pl-2 text-center">Gram To KG</h2>
+                                <div class="tools-input-output row col-md-12 ">
+                                    <div class="tools-input-area col-md-6 bg-info rounded">
+                                        <div class="container-fluid mt-5">
+                                            <input type="number" id="input2" class="form-control" onkeyup="change2()" placeholder="Enter Gram?">
+                                            <br>
+                                            <button onclick="pushprint2()" class="btn btn-primary mb-4">Save & Next</button>
+                                            <p id="output2" class="p-2 output"> __KG</p>
+                                        </div>
+                                    </div>
+                                    <div class="tools-output-save col-md-6 bg-danger rounded">
+                                        <h5 class="text-white pt-3">Your Value Calculation</h5>
+                                        <hr class="bg-white">
+                                        <div id="dropHistory2"></div>
+                                    </div> 
+                                </div>
+                                <div class="a-to-b-quick">
+                                </div>                                    
+                            </div>                              
+                        </div>
+                    </div>
+    
             </div>
         </div>
-    </div>
-    
-</body>
+
+  </body>
 </html>
